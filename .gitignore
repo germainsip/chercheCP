@@ -26,3 +26,6 @@ hs_err_pid*
 *.DS_Store
 /dist/
 /build/
+.DS_Store
+src/.DS_Store
+src/cherchecp/.DS_Store

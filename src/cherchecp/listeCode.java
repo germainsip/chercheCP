@@ -25,16 +25,17 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class listeCode {
+    static HashMap<String,String> codepost = new HashMap(); 
+
 
     
    
     public static void chargement() {
         //lien fichier et type de csv
-        String csvFile = "/sourceDonnees/laposte_hexasmal.csv";
+        String csvFile = "laposte_hexasmal.csv";
         
         Pattern pattern = Pattern.compile(";");
         
-        HashMap<String,String> codepost = new HashMap(); 
         String ville;
         
 

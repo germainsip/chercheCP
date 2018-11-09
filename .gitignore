@@ -24,3 +24,5 @@ hs_err_pid*
 
 # specific Mac 
 *.DS_Store
+/dist/
+/build/

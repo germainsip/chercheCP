@@ -27,6 +27,8 @@ import javafx.scene.input.KeyEvent;
  */
 public class FXMLDocumentController implements Initializable {
     
+    listeCode lc;
+    
     private Label label;
     @FXML
     private Label codePoOut;
@@ -39,7 +41,8 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        listeCode.chargement();
+        lc = new listeCode();
+        lc.chargement();
     }    
 
     @FXML
@@ -51,7 +54,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void cherche(KeyEvent event) {
        
-        codePoOut.setText(listeCode.codepost.get(listeCode.chaineStandard(ville_imput.getText())));
+        codePoOut.setText(lc.codepost.get(lc.chaineStandard(ville_imput.getText())));
     }
     
 }

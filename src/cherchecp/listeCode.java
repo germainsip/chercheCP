@@ -8,7 +8,6 @@
  * |_|_|_\_, | |_|_|_\__,_\__|_||_|_|_||_\___|   
  *       |__/                                    
  */
-
 package cherchecp;
 
 import java.util.*;
@@ -16,43 +15,43 @@ import java.util.regex.Pattern;
 
 /**
  * créé le 22 oct. 2018 , 16:53:43
+ *
  * @author germain
  */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.text.Normalizer;
 
-
 public class listeCode {
-    static HashMap<String,String> codepost = new HashMap(); 
 
+    HashMap<String, String> codepost = new HashMap();
 
-    
-   
-    public static void chargement() {
+    public void chargement() {
         //lien fichier et type de csv
-        String csvFile = "src/sourceCSV/laposte.csv";
-        
+        String csvFile = "laposte.csv";
+
         Pattern pattern = Pattern.compile(";");
-        
+
         String ville;
-        
+        BufferedReader br;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+        try {
 
-
+            InputStream is = getClass().getClassLoader().getResourceAsStream("sourceCSV/laposte.csv");
+            br = new BufferedReader(new InputStreamReader(is));
 
             codepost = br
-            .lines()
-            .skip(1)
-            .map(x -> pattern.split(x))
-            
-            .collect(HashMap::new, (map, x) ->
-            map.put(x[3], x[2]),
-            Map::putAll);
+                    .lines()
+                    .skip(1)
+                    .map(x -> pattern.split(x))
+                    .collect(HashMap::new, (map, x)
+                            -> map.put(x[3], x[2]),
+                            Map::putAll);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 //        //vérification la création
@@ -64,22 +63,19 @@ public class listeCode {
 //        
 //        System.out.println("Le code postale de "+ville+ " = "+codepost.get(ville));
 
-        
-
     }
+
     /*
     * 
-    */
+     */
 
     /**
      * pour passer d'une chaine accentuée à une chaine majuscule sans accent
-     * @param c
-     * chaine de caractère
-     * @return
-     * chaine de caractère majuscule sans accent
+     *
+     * @param c chaine de caractère
+     * @return chaine de caractère majuscule sans accent
      */
-
-    public static String chaineStandard(String c) {
+    public String chaineStandard(String c) {
         String tmp = c.toUpperCase();
         tmp = Normalizer.normalize(tmp, Normalizer.Form.NFD);
         Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");

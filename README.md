@@ -7,3 +7,4 @@ Le fichier csv est intégré aux sources
 
 On peut entrez le nom des villes sans respecter la casse ni se préoccuper des accents.
 
+![Screenshot](Capture.png)

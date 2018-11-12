@@ -31,7 +31,7 @@ public class listeCode {
 
     public void chargement() {
         //lien fichier et type de csv
-        String csvFile = "laposte.csv";
+        //String csvFile = "laposte.csv";
 
         Pattern pattern = Pattern.compile(";");
 

@@ -11,8 +11,6 @@
 
 package cherchecp;
 
-import java.io.BufferedReader;
-import java.io.*;
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -34,7 +32,7 @@ public class listeCode {
    
     public static void chargement() {
         //lien fichier et type de csv
-        String csvFile = "laposte_hexasmal.csv";
+        String csvFile = "src/sourceCSV/laposte.csv";
         
         Pattern pattern = Pattern.compile(";");
         

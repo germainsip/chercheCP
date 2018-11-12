@@ -23,6 +23,8 @@ import java.util.regex.Pattern;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.Normalizer;
+
 
 public class listeCode {
     static HashMap<String,String> codepost = new HashMap(); 
@@ -64,6 +66,27 @@ public class listeCode {
 //        
 //        System.out.println("Le code postale de "+ville+ " = "+codepost.get(ville));
 
-    }
+        
 
+    }
+    /*
+    * 
+    */
+
+    /**
+     * pour passer d'une chaine accentuée à une chaine majuscule sans accent
+     * @param c
+     * chaine de caractère
+     * @return
+     * chaine de caractère majuscule sans accent
+     */
+
+    public static String chaineStandard(String c) {
+        String tmp = c.toUpperCase();
+        tmp = Normalizer.normalize(tmp, Normalizer.Form.NFD);
+        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        tmp = pattern.matcher(tmp).replaceAll("");
+        System.out.println(tmp);
+        return tmp.toUpperCase();
+    }
 }

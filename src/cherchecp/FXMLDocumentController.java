@@ -12,6 +12,7 @@ package cherchecp;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -49,7 +50,8 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void cherche(KeyEvent event) {
-        codePoOut.setText(listeCode.codepost.get(ville_imput.getText().toUpperCase()));
+       
+        codePoOut.setText(listeCode.codepost.get(listeCode.chaineStandard(ville_imput.getText())));
     }
     
 }

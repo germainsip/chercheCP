@@ -31,8 +31,10 @@ public class ChercheCP extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
-        stage.initStyle(StageStyle.UNDECORATED);
-        //stage.getIcons().add(new Image("src/sourceCSV/postcard.png"));
+        //stage.initStyle(StageStyle.UNDECORATED);
+        
+        stage.getIcons().add(new Image("/sourceCSV/postcard.png"));
+        stage.setTitle("Code postal");
         stage.show();
     }
 

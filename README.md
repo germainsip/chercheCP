@@ -5,7 +5,7 @@ https://www.data.gouv.fr/fr/datasets/r/554590ab-ae62-40ac-8353-ee75162c05ee
 
 Le fichier csv est intégré aux sources
 
-On peut entrez le nom des villes sans respecter la casse ni se préoccuper des accents.
+On peut entrer le nom des villes sans respecter la casse ni se préoccuper des accents.
 
 ![Screenshot](Capture.png)
 

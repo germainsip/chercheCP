@@ -9,3 +9,6 @@ On peut entrer le nom des villes sans respecter la casse ni se préoccuper des a
 
 ![Screenshot](Capture.png)
 
+
+
+Pour l'aspect Material Design ce projet utilise le framework jfoenix

@@ -12,3 +12,4 @@ On peut entrer le nom des villes sans respecter la casse ni se préoccuper des a
 
 
 Pour l'aspect Material Design ce projet utilise le framework jfoenix
+Ce projet va être mis à jour pour le jdk13 et openjfx13 dans une nouvelle branche...

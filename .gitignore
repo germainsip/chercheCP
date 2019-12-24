@@ -22,10 +22,12 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# specific Mac 
+# specific Mac
 *.DS_Store
 /dist/
 /build/
 .DS_Store
 src/.DS_Store
 src/cherchecp/.DS_Store
+sourceDonnees/.laposte_hexasmal.csv.icloud
+src/sourceCSV/.laposte.csv.icloud

@@ -8,9 +8,14 @@
  * |_|_|_\_, | |_|_|_\__,_\__|_||_|_|_||_\___|   
  *       |__/                                    
  */
-package cherchecp;
+package org.gerblog;
 
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.text.Normalizer;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
@@ -18,12 +23,6 @@ import java.util.regex.Pattern;
  *
  * @author germain
  */
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.text.Normalizer;
 
 public class listeCode {
 
@@ -40,7 +39,7 @@ public class listeCode {
 
         try {
 
-            InputStream is = getClass().getClassLoader().getResourceAsStream("sourceCSV/laposte.csv");
+            InputStream is = getClass().getClassLoader().getResourceAsStream("org/gerblog/sourceCSV/laposte.csv");
             br = new BufferedReader(new InputStreamReader(is));
 
             codepost = br

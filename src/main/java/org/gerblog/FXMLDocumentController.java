@@ -8,7 +8,7 @@
  * |_|_|_\_, | |_|_|_\__,_\__|_||_|_|_||_\___|   
  *       |__/                                    
  */
-package cherchecp;
+package org.gerblog;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;

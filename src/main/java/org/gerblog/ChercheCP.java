@@ -8,7 +8,7 @@
  * |_|_|_\_, | |_|_|_\__,_\__|_||_|_|_||_\___|   
  *       |__/                                    
  */
-package cherchecp;
+package org.gerblog;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -26,14 +26,14 @@ public class ChercheCP extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/org/gerblog/FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
         //stage.initStyle(StageStyle.UNDECORATED);
         
-        stage.getIcons().add(new Image("/sourceCSV/postcard.png"));
+        stage.getIcons().add(new Image("/org/gerblog/sourceCSV/postcard.png"));
         stage.setTitle("Code postal");
         stage.show();
     }

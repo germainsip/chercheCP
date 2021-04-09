@@ -16,7 +16,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  *
@@ -26,14 +25,14 @@ public class ChercheCP extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/org/gerblog/FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
         //stage.initStyle(StageStyle.UNDECORATED);
         
-        stage.getIcons().add(new Image("/org/gerblog/sourceCSV/postcard.png"));
+        stage.getIcons().add(new Image("/sourceCSV/postcard.png"));
         stage.setTitle("Code postal");
         stage.show();
     }

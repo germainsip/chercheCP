@@ -15,7 +15,6 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.text.Normalizer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -28,7 +27,7 @@ import java.util.regex.Pattern;
 
 public class listeCode {
 
-    HashMap<String, String> codepost = new HashMap();
+    HashMap<String, String> codepost;
 
     public void chargement() {
         //lien fichier et type de csv
@@ -41,13 +40,13 @@ public class listeCode {
 
         try {
 
-            InputStream is = getClass().getClassLoader().getResourceAsStream("org/gerblog/sourceCSV/laposte.csv");
+            InputStream is = getClass().getClassLoader().getResourceAsStream("sourceCSV/laposte.csv");
             br = new BufferedReader(new InputStreamReader(is));
 
             codepost = br
                     .lines()
                     .skip(1)
-                    .map(x -> pattern.split(x))
+                    .map(pattern::split)
                     .collect(HashMap::new, (map, x)
                             -> map.put(x[3], x[2]),
                             Map::putAll);
@@ -85,6 +84,12 @@ public class listeCode {
         return tmp.toUpperCase();
     }*/
 
+    /**
+     * pour passer d'une chaine accentuée à une chaine majuscule sans accent
+     *
+     * @param c chaine de caractère
+     * @return chaine de caractère majuscule sans accent
+     */
     public String chaineStandard(String c){
         String tmp = StringUtils.stripAccents(c);
         return tmp.toUpperCase();

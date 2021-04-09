@@ -10,6 +10,8 @@
  */
 package org.gerblog;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -74,12 +76,17 @@ public class listeCode {
      * @param c chaine de caractère
      * @return chaine de caractère majuscule sans accent
      */
-    public String chaineStandard(String c) {
+    /*public String chaineStandard(String c) {
         String tmp = c.toUpperCase();
         tmp = Normalizer.normalize(tmp, Normalizer.Form.NFD);
         Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
         tmp = pattern.matcher(tmp).replaceAll("");
         System.out.println(tmp);
+        return tmp.toUpperCase();
+    }*/
+
+    public String chaineStandard(String c){
+        String tmp = StringUtils.stripAccents(c);
         return tmp.toUpperCase();
     }
 }

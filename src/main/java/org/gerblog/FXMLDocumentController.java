@@ -11,7 +11,6 @@
 package org.gerblog;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,6 +18,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 
 /**
@@ -33,7 +33,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Label codePoOut;
     @FXML
-    private JFXTextField ville_imput;
+    private TextField ville_imput;
     @FXML
     private JFXButton quit;
     

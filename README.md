@@ -14,3 +14,9 @@ On peut entrer le nom des villes sans respecter la casse ni se préoccuper des a
 Pour l'aspect Material Design ce projet utilise le framework jfoenix
 
 **Ce projet est désormais compilable avec JDK14 et gradle 6.5.1**
+
+**Mise à jour en cours vers JDK17 et JFX17**
+
+## Fix
+- JFXTextField incompatibles avec le nouveau JDK
+

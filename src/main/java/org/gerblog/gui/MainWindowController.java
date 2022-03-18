@@ -8,7 +8,7 @@
  * |_|_|_\_, | |_|_|_\__,_\__|_||_|_|_||_\___|   
  *       |__/                                    
  */
-package org.gerblog;
+package org.gerblog.gui;
 
 import com.jfoenix.controls.JFXButton;
 
@@ -20,12 +20,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import org.gerblog.tool.listeCode;
 
 /**
  *
  * @author germain
  */
-public class FXMLDocumentController implements Initializable {
+public class MainWindowController implements Initializable {
     
     listeCode lc;
     
@@ -33,7 +34,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Label codePoOut;
     @FXML
-    private TextField ville_imput;
+    private TextField ville_input;
     @FXML
     private JFXButton quit;
     
@@ -53,8 +54,8 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void cherche(KeyEvent event) {
-       
-        codePoOut.setText(lc.codepost.get(lc.chaineStandard(ville_imput.getText())));
+       // TODO: to be simplified
+        codePoOut.setText(lc.getCodepost().get(lc.chaineStandard(ville_input.getText())));
     }
     
 }

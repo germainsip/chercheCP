@@ -7,11 +7,11 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="142.0" prefWidth="403.0" stylesheets="@materiaPlus.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gerblog.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="142.0" prefWidth="403.0" stylesheets="@../styles/materiaPlus.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gerblog.gui.MainWindowController">
     <children>
       <HBox layoutX="115.0" layoutY="73.0" prefHeight="27.0" prefWidth="292.0" spacing="30.0" styleClass="card" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
-            <TextField fx:id="ville_imput"  onKeyReleased="#cherche" promptText="Ville...">
+            <TextField fx:id="ville_input"  onKeyReleased="#cherche" promptText="Ville...">
                <font>
                   <Font size="18.0" />
                </font></TextField>

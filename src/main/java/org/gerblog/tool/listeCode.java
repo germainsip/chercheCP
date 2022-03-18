@@ -8,7 +8,7 @@
  * |_|_|_\_, | |_|_|_\__,_\__|_||_|_|_||_\___|   
  *       |__/                                    
  */
-package org.gerblog;
+package org.gerblog.tool;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -27,7 +27,11 @@ import java.util.regex.Pattern;
 
 public class listeCode {
 
-    HashMap<String, String> codepost;
+    private HashMap<String, String> codepost;
+
+    public HashMap<String, String> getCodepost() {
+        return codepost;
+    }
 
     public void chargement() {
         //lien fichier et type de csv

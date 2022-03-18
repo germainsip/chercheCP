@@ -25,3 +25,16 @@
     -fx-background-color: rgba(0,0,0,0);
     -fx-opacity: 0;
 }
+
+.textField {
+	/*-fx-background-color: #2fa02f, #2f2d2f;
+	-fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+	/*-fx-font-size: 125px;
+	-fx-text-fill: #ffffff;*/
+	-fx-display-caret: false;
+	-fx-background-radius: 0;
+	-fx-background-insets: 0, 0 0 0 0 ;
+	-fx-padding: 1 ;
+
+	/*-fx-alignment: center-right ;*/
+}

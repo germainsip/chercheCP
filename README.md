@@ -15,8 +15,9 @@ Pour l'aspect Material Design ce projet utilise le framework jfoenix
 
 **Ce projet est désormais compilable avec JDK14 et gradle 6.5.1**
 
-**Mise à jour en cours vers JDK17 et JFX17**
+** 18/03/22 Mise à jour en cours vers JDK17 et JFX17**
 
 ## Fix
 - JFXTextField incompatibles avec le nouveau JDK
 
+<!--Notes perso:  https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/ -->

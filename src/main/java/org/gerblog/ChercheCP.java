@@ -10,12 +10,20 @@
  */
 package org.gerblog;
 
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.gerblog.tool.listeCodeV2;
+
+import javax.xml.stream.util.StreamReaderDelegate;
+import java.io.*;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -28,7 +36,9 @@ public class ChercheCP extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/gui/mainwindow.fxml"));
         
         Scene scene = new Scene(root);
-        
+        //new listeCodeV2();
+       listeCodeV2 gru = new listeCodeV2();
+        System.out.println(gru.cpSearch());
         stage.setScene(scene);
         //stage.initStyle(StageStyle.UNDECORATED);
         

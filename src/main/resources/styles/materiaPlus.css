@@ -31,9 +31,10 @@
 	-fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
 	/*-fx-font-size: 125px;
 	-fx-text-fill: #ffffff;*/
-	-fx-display-caret: false;
-	-fx-background-radius: 0;
-	-fx-background-insets: 0, 0 0 0 0 ;
+	/*-fx-display-caret: false;*/
+	/*-fx-background-radius: 0;*/
+	-fx-background-color: -fx-control-inner-background;
+	/*-fx-background-insets: 0, 0 0 0 0 ;*/
 	-fx-padding: 1 ;
 
 	/*-fx-alignment: center-right ;*/

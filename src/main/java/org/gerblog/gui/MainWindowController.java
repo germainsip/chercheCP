@@ -15,12 +15,15 @@ import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import org.gerblog.tool.listeCode;
 
 /**
@@ -28,7 +31,9 @@ import org.gerblog.tool.listeCode;
  * @author germain
  */
 public class MainWindowController implements Initializable {
-    
+
+    public JFXButton plus;
+    public HBox focus;
     listeCode lc;
     
     private Label label;
@@ -43,14 +48,14 @@ public class MainWindowController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        Platform.runLater(()->focus.requestFocus());
         lc = new listeCode();
         lc.chargement();
-    }    
+    }
 
     @FXML
     private void faitLe(ActionEvent event) {
         System.exit(0);
-
     }
 
     @FXML

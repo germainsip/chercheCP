@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="142.0" prefWidth="403.0" stylesheets="@../styles/materiaPlus.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gerblog.gui.MainWindowController">
     <children>
-      <HBox layoutX="115.0" layoutY="73.0" prefHeight="27.0" prefWidth="292.0" spacing="30.0" styleClass="card" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <HBox fx:id="focus" layoutX="115.0" layoutY="73.0" prefHeight="27.0" prefWidth="292.0" spacing="30.0" styleClass="card" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
             <TextField fx:id="ville_input" onKeyReleased="#cherche" promptText="Ville..." styleClass="textField">
                <font>
@@ -21,6 +21,7 @@
                <font>
                   <Font name="Futura Bold" size="24.0" />
                </font></Label>
+            <JFXButton fx:id="plus" text="+" />
          </children>
       </HBox>
       <JFXButton fx:id="quit" layoutX="171.0" layoutY="101.0" onAction="#faitLe" ripplerFill="#c2d0b7" style="-fx-background-color: #87bb34;" text="Quitter" AnchorPane.bottomAnchor="14.0" />

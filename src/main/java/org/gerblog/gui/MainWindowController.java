@@ -13,7 +13,7 @@ package org.gerblog.gui;
 import com.jfoenix.controls.JFXButton;
 
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -25,6 +25,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.gerblog.tool.listeCode;
+import org.gerblog.tool.listeCodeV2;
 
 /**
  *
@@ -34,7 +35,7 @@ public class MainWindowController implements Initializable {
 
     public JFXButton plus;
     public HBox focus;
-    listeCode lc;
+    private listeCodeV2 lc;
     
     private Label label;
     @FXML
@@ -49,8 +50,8 @@ public class MainWindowController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Platform.runLater(()->focus.requestFocus());
-        lc = new listeCode();
-        lc.chargement();
+        lc = new listeCodeV2();
+        //lc.chargement();
     }
 
     @FXML
@@ -61,7 +62,13 @@ public class MainWindowController implements Initializable {
     @FXML
     private void cherche(KeyEvent event) {
        // TODO: to be simplified
-        codePoOut.setText(lc.getCodepost().get(lc.chaineStandard(ville_input.getText())));
+        List<String> result = lc.cpSearch(ville_input.getText());
+        Collections.sort(result);
+        plus.setVisible(result.size()>1);
+        //codePoOut.setText(lc.getCodepost().get(lc.chaineStandard(ville_input.getText())));
+        if (!result.isEmpty()) {
+            codePoOut.setText(result.get(0));
+        } else codePoOut.setText("");
     }
     
 }

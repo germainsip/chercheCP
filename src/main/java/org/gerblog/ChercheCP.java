@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.gerblog.tool.listeCodeV2;
 
 import javax.xml.stream.util.StreamReaderDelegate;
@@ -37,10 +38,9 @@ public class ChercheCP extends Application {
         
         Scene scene = new Scene(root);
         //new listeCodeV2();
-       listeCodeV2 gru = new listeCodeV2();
-        System.out.println(gru.cpSearch());
+
         stage.setScene(scene);
-        //stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.UNDECORATED);
         
         stage.getIcons().add(new Image("/sourceCSV/postcard.png"));
         stage.setTitle("Code postal");

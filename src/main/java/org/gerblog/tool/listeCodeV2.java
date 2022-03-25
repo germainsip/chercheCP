@@ -5,6 +5,7 @@ import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvException;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -30,10 +31,11 @@ public class listeCodeV2 {
         }
     }
 
-    public List<String> cpSearch(){
+    public List<String> cpSearch(String ville){
         List<String> list = new ArrayList<>();
+        String villeStd = chaineStandard(ville);
         listeDuCSV.forEach(x -> {
-            if(x[1].equals("AMIENS"))
+            if(x[1].equals(villeStd))
             {list.add(x[2]);
             System.out.println(x[1]);}
         });
@@ -42,5 +44,16 @@ public class listeCodeV2 {
        // System.out.println(listeDuCSV.get(0));
 
         return list;
+    }
+
+    /**
+     * pour passer d'une chaine accentuée à une chaine majuscule sans accent
+     *
+     * @param c chaine de caractère
+     * @return chaine de caractère majuscule sans accent
+     */
+    private String chaineStandard(String c){
+        String tmp = StringUtils.stripAccents(c);
+        return tmp.toUpperCase();
     }
 }

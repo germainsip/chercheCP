@@ -15,6 +15,8 @@ import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.*;
 
+import com.jfoenix.controls.JFXListView;
+import com.jfoenix.controls.JFXPopup;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,6 +38,7 @@ public class MainWindowController implements Initializable {
     public JFXButton plus;
     public HBox focus;
     private listeCodeV2 lc;
+    List<String> result;
     
     private Label label;
     @FXML
@@ -60,12 +63,26 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private void cherche(KeyEvent event) {
-        List<String> result = lc.cpSearch(ville_input.getText());
+        result = lc.cpSearch(ville_input.getText());
         Collections.sort(result);
         plus.setVisible(result.size()>1); //TODO: ajouter la fenêtre de codes supplémentaires
         if (!result.isEmpty()) {
             codePoOut.setText(result.get(0));
         } else codePoOut.setText("");
     }
-    
+
+
+    public void afficheLesAutres(ActionEvent actionEvent) {
+        JFXListView<Label> list = new JFXListView<>();
+
+        for(String res : result){
+            list.getItems().add(new Label(res));
+        }
+        JFXPopup popup = new JFXPopup(list);
+        popup.show(plus);
+    }
+
+    public void ajoutAutreCp(boolean oui){
+        //TODO: add tooltip
+    }
 }

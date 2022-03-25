@@ -60,11 +60,9 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private void cherche(KeyEvent event) {
-       // TODO: to be simplified
         List<String> result = lc.cpSearch(ville_input.getText());
         Collections.sort(result);
-        plus.setVisible(result.size()>1);
-        //codePoOut.setText(lc.getCodepost().get(lc.chaineStandard(ville_input.getText())));
+        plus.setVisible(result.size()>1); //TODO: ajouter la fenêtre de codes supplémentaires
         if (!result.isEmpty()) {
             codePoOut.setText(result.get(0));
         } else codePoOut.setText("");

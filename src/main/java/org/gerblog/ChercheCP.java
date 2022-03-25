@@ -41,7 +41,7 @@ public class ChercheCP extends Application {
 
         stage.setScene(scene);
         stage.initStyle(StageStyle.UNDECORATED);
-        
+        //TODO: ajouter le dragging
         stage.getIcons().add(new Image("/sourceCSV/postcard.png"));
         stage.setTitle("Code postal");
         stage.show();

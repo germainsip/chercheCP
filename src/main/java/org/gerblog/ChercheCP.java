@@ -25,6 +25,7 @@ import javax.xml.stream.util.StreamReaderDelegate;
 import java.io.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -34,10 +35,9 @@ public class ChercheCP extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/gui/mainwindow.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/gui/mainwindow.fxml")));
         
         Scene scene = new Scene(root);
-        //new listeCodeV2();
 
         stage.setScene(scene);
         stage.initStyle(StageStyle.UNDECORATED);

@@ -24,7 +24,7 @@
             <JFXButton fx:id="plus" text="+" visible="false" />
          </children>
       </HBox>
-      <JFXButton fx:id="quit" layoutX="171.0" layoutY="101.0" onAction="#faitLe" ripplerFill="#c2d0b7" style="-fx-background-color: #87bb34;" text="Quitter" AnchorPane.bottomAnchor="14.0" />
+      <JFXButton fx:id="quit" layoutX="171.0" layoutY="101.0" onAction="#quit" ripplerFill="#c2d0b7" style="-fx-background-color: #87bb34;" text="Quitter" AnchorPane.bottomAnchor="14.0" />
       <Circle fill="#fbeed7" layoutX="344.0" layoutY="112.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="25.0" />
       <Circle fill="#ffba5a" layoutX="354.0" layoutY="112.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="15.0" />
       <Circle fill="#ff7657" layoutX="364.0" layoutY="112.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />

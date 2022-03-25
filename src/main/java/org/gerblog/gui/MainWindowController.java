@@ -51,11 +51,10 @@ public class MainWindowController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         Platform.runLater(()->focus.requestFocus());
         lc = new listeCodeV2();
-        //lc.chargement();
     }
 
     @FXML
-    private void faitLe(ActionEvent event) {
+    private void quit(ActionEvent event) {
         System.exit(0);
     }
 

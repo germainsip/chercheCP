@@ -23,6 +23,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -65,7 +66,7 @@ public class MainWindowController implements Initializable {
     private void cherche(KeyEvent event) {
         result = lc.cpSearch(ville_input.getText());
         Collections.sort(result);
-        plus.setVisible(result.size()>1); //TODO: ajouter la fenêtre de codes supplémentaires
+        ajoutAutreCp(result.size()>1);
         if (!result.isEmpty()) {
             codePoOut.setText(result.get(0));
         } else codePoOut.setText("");
@@ -83,6 +84,10 @@ public class MainWindowController implements Initializable {
     }
 
     public void ajoutAutreCp(boolean oui){
-        //TODO: add tooltip
+        plus.setVisible(oui);
+        if (oui){
+        Tooltip cpPlus = new Tooltip();
+        cpPlus.setText(result.toString());
+        codePoOut.setTooltip(cpPlus);}
     }
 }

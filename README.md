@@ -19,5 +19,9 @@ Pour l'aspect Material Design ce projet utilise le framework jfoenix
 
 ## Fix
 - JFXTextField incompatibles avec le nouveau JDK
+## Updates
+- Le plus petit code postal est affiché en premier
+- S'il existe d'autres codes postaux pour une ville donnée un tooltip s'affiche au survol du code
+- De même un bouton + devient visible pour afficher la liste sous forme de popup
 
 <!--Notes perso:  https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/ -->
